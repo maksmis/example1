@@ -1,6 +1,4 @@
 
-html {
-}
 body{
     margin-top: 0;
     margin-left: 0;
@@ -11,27 +9,17 @@ body{
     color: rgb(75, 75, 75);
 }
 
-/*для основного контейнера будем использовать фиксировано-резиновую верстку*/
 .container{
-    /*устанавливаем основную ширину равной ширине видимой части окна браузера*/
     width: 100vw;
-    /*устанавливаем минимальную ширину, до которой можно сжимать контейнер, если ширина устройства будет меньше - появится горизонтальный скролл*/
     min-width: 320px;
-    /*устанавливаем максимальную ширину, до которой можно расширять контейнер, если ширина устройства будет больше - по бокам появятся отступы*/
     max-width: 1200px;
-    /*для того, чтобы контейнер находился всегда по центру по горизонтали указываем значения для внешних отступов*/
     margin: auto;
-    /*в случае, если контента будет мало, чтобы страница полностью заполнила всю высоту окна браузера, устанавливаем минимальную высоту*/
     min-height: 100vh;
-    height: 4000px
-    /*в случае, если контента будет много, чтобы появился вертикальный скролл, устанавливаем значение высоты равной содержимому*/
+    height: 4000px;
     height: auto;
-    /*для более простого расположения элементов на странице, воспользуемся технологией flexBox*/
     display: flex;
-    /*направление основной оси меняем на вертикальное*/
     flex-direction: column;
 }
-/*каждому элементу контейнера будем устанавливать фоновой цвет, чтобы было нагляднее*/
 
 .hr-left-side{
     border-width: 1px;
@@ -48,10 +36,8 @@ body{
     margin-right: 20px;
 }
 main{
-    /*чтобы заполнять все пространство по основной оси основным элементом прописываем свойство flex */
     flex: 1 1 auto;
     display: flex;
-    /*дочерние элементы располагаются слева на право*/
     justify-content: space-between;
 }
 aside a{
@@ -61,7 +47,6 @@ aside a{
 aside{
     background: #F6F6F6;
     box-shadow: 6px 0px 2px -2px rgb(50 50 50 / 45%);
-    /*position: static;*/
 }
 aside h2{
     margin-bottom:20px;
@@ -153,7 +138,6 @@ main>aside>div>h3{
     text-transform: capitalize;
 }
 main>section{
-    /*чтобы заполнять все пространство по основной оси основным элементом прописываем свойство flex */
     flex: 1 1 55%;
     margin-left: 3px;
 }
@@ -324,7 +308,7 @@ main>section{
     padding-bottom: 20px;
     margin-left: 21px;
 }
-#t-2{
+.t-2{
     background-color: #274D97;
     color: #fff;
     padding-top: 10px;
@@ -337,11 +321,11 @@ main>section{
 .rrr{
     width: 265px;
 }
-#t-2 p{
+.t-2 p{
     margin-top: 10px;
     margin-bottom: 0;
 }
-#t-2 h3{
+.t-2 h3{
     margin: 0;
 }
 .t-i-t{
@@ -408,17 +392,17 @@ input{
     margin-right: 40px;
     margin-left: 20px;
 }
-#id1{
+.id1{
     margin-right: 47px;
     margin-left: 20px;
 }
-#nam1{
+.nam1{
     margin-right: 56px;
 }
 #nam{
     margin-right: 100px;
 }
-#sal1{
+.sal1{
     margin-right: 48px;
 }
 #sal{
@@ -430,10 +414,10 @@ input{
 #coun{
     margin-right: 44px;
 }
-#coun1{
+.coun1{
     margin-right: 60px;
 }
-#p5{
+.p5{
     margin-top: 30px;
 }
 #foot a{
@@ -560,13 +544,13 @@ input{
 .t-i-t {
     padding: 57px;
 }
-#t-2{
+.t-2{
     width: 640px;
 }
 .s-itemsg {
     margin-left: 10px;
 }
-#p5{
+.p5{
     margin-top: 25px;
 }
 .t-items {
@@ -597,13 +581,13 @@ input{
 #sal {
     margin-right: 140px;
 }
-#id1 {
+.id1 {
     margin-right: 97px;
 }
-#nam1 {
+.nam1 {
     margin-right: 96px;
 }
-#sal1 {
+.sal1 {
     margin-right: 129px;
 }
 aside li{
@@ -734,13 +718,13 @@ body{
 #img-i {
     margin-right: 35px;
 }
-#t-2{
+.t-2{
     width: 738px;
 }
 .s-itemsg {
     margin-left: 10px;
 }
-#p5{
+.p5{
     margin-top: 25px;
 }
 .t-items {
@@ -761,10 +745,10 @@ body{
 #id {
     margin-right: 90px;
 }
-#nam1 {
+.nam1 {
     margin-right: 145px;
 }
-#sal1 {
+.sal1 {
     margin-right: 181px;
 }
 #nam {
@@ -773,7 +757,7 @@ body{
 #sal {
     margin-right: 190px;
 }
-#id1 {
+.id1 {
     margin-right: 97px;
 
 }
@@ -895,13 +879,13 @@ body{
 .inpp {
     width: 465px;
 }
-#t-2{
+.t-2{
     width: 538px;
 }
 .s-itemsg {
     margin-left: 10px;
 }
-#p5{
+.p5{
     margin-top: 25px;
 }
 .tabl{
@@ -925,13 +909,13 @@ body{
 #nam {
     margin-right: 120px;
 }
-#id1 {
+.id1 {
     margin-right: 78px;
 }
-#nam1 {
+.nam1 {
     margin-right: 75px;
 }
-#sal1 {
+.sal1 {
     margin-right: 90px;
 }
 .t-items {
@@ -1073,13 +1057,13 @@ body{
 .inpp {
     width: 465px;
 }
-#t-2{
+.t-2{
     width: 538px;
 }
 .s-itemsg {
     margin-left: 10px;
 }
-#p5{
+.p5{
     margin-top: 25px;
 
 }
@@ -1104,13 +1088,13 @@ body{
 #nam {
     margin-right: 120px;
 }
-#id1 {
+.id1 {
     margin-right: 78px;
 }
-#nam1 {
+.nam1 {
     margin-right: 75px;
 }
-#sal1 {
+.sal1 {
     margin-right: 90px;
 }
 .t-items {
@@ -1268,13 +1252,13 @@ input {
 .t-i-t {
     padding: 34px;
 }
-#t-2{
+.t-2{
     width: 490px;
 }
 .s-itemsg {
     margin-left: 10px;
 }
-#p5{
+.p5{
     margin-top: 25px;
 }
 .t-items {
@@ -1324,11 +1308,11 @@ body{
     margin-right: 50px;
     margin-left: 20px;
 }
-#id1 {
+.id1 {
     margin-right: 58px;
     margin-left: 20px;
 }
-#sal1 {
+.sal1 {
     margin-right: 68px;
 }
 .tabl{
@@ -1467,13 +1451,13 @@ body{
 .t-i-t {
     padding: 20px;
 }
-#t-2{
+.t-2{
     width: 420px;
 }
 .s-itemsg {
     margin-left: 10px;
 }
-#p5{
+.p5{
     margin-top: 25px;
 }
 .t-items {
@@ -1529,13 +1513,13 @@ body{
 #sal {
     margin-right: 70px;
 }
-#id1 {
+.id1 {
     margin-right: 46px;
 }
-#nam1 {
+.nam1 {
     margin-right: 36px;
 }
-#sal1 {
+.sal1 {
     margin-right: 59px;
 }
 }
@@ -1675,14 +1659,14 @@ body{
 .t-i-t {
     padding: 5px;
 }
-#t-2{
+.t-2{
     width: 320px;
     margin-left: 11px;
 }
 .s-itemsg {
     margin-left: 10px;
 }
-#p5{
+.p5{
     margin-top: 25px;
 }
 #server {
@@ -1715,13 +1699,13 @@ body{
     margin-right: 22px;
     margin-left: 0px;
 }
-#nam1 {
+.nam1 {
     margin-right: 28px;
 }
-#sal1 {
+.sal1 {
     margin-right: 23px;
 }
-#coun1 {
+.coun1 {
     margin-right: 60px;
 }
 .i-2 {
