@@ -1,0 +1,1217 @@
+
+html {
+}
+body{
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+ 
+    font-family: Helvetica, Tahoma, Verdana,   sans-serif;
+
+    color: rgb(75, 75, 75);
+}
+
+/*для основного контейнера будем использовать фиксировано-резиновую верстку*/
+.container{
+    /*устанавливаем основную ширину равной ширине видимой части окна браузера*/
+    width: 100vw;
+    /*устанавливаем минимальную ширину, до которой можно сжимать контейнер, если ширина устройства будет меньше - появится горизонтальный скролл*/
+    min-width: 320px;
+    /*устанавливаем максимальную ширину, до которой можно расширять контейнер, если ширина устройства будет больше - по бокам появятся отступы*/
+    max-width: 1200px;
+    /*для того, чтобы контейнер находился всегда по центру по горизонтали указываем значения для внешних отступов*/
+    margin: auto;
+    /*в случае, если контента будет мало, чтобы страница полностью заполнила всю высоту окна браузера, устанавливаем минимальную высоту*/
+    min-height: 100vh;
+    height: 4000px
+    /*в случае, если контента будет много, чтобы появился вертикальный скролл, устанавливаем значение высоты равной содержимому*/
+    height: auto;
+    /*для более простого расположения элементов на странице, воспользуемся технологией flexBox*/
+    display: flex;
+    /*направление основной оси меняем на вертикальное*/
+    flex-direction: column;
+}
+/*каждому элементу контейнера будем устанавливать фоновой цвет, чтобы было нагляднее*/
+
+.hr-left-side{
+    border-width: 1px;
+    margin-left: -10px;
+    width: 178px;
+}
+
+main{
+    /*чтобы заполнять все пространство по основной оси основным элементом прописываем свойство flex */
+    flex: 1 1 auto;
+    display: flex;
+    /*дочерние элементы располагаются слева на право*/
+    justify-content: space-between;
+}
+aside a{
+    text-decoration: none;
+}
+
+aside{
+    background: #F6F6F6;
+    box-shadow: 6px 0px 2px -2px rgb(50 50 50 / 45%);
+    /*position: static;*/
+}
+aside h2{
+    margin-bottom:20px;
+    margin-top: 40px;
+}
+section h2{
+    margin-top: 50px;
+}
+aside li{
+    list-style: none;
+    margin-top: 20px;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    width: 155px; 
+}
+aside ul{
+    padding-left: 0px;
+}
+#aside-im1.active::before{
+    content: url(../images/da-w.svg);
+}
+#aside-im1::before{
+    content: url(../images/da.svg);
+    padding-right: 16px;
+    padding-left: 20px;
+}
+
+aside ul li a{
+    color:#8f8f8f; 
+}
+.aside-menu li.active{
+    background: #C32056;
+    color: #fff;
+}
+ .active a{
+    color: #fff;
+}
+#aside-im2.active::before{
+    content: url(../images/user-w.svg);
+}
+#aside-im2::before{
+    content: url(../images/user-g.svg);
+    padding-right: 15px;
+    padding-left: 20px;
+}
+#aside-im3.active::before{
+    content: url(../images/p-w.svg);
+}
+#aside-im3::before{
+    content: url(../images/p-g.svg);
+    padding-right: 19px;
+    padding-left: 23px;
+}
+#aside-im4.active::before{
+    content: url(../images/c-w.svg);
+}
+#aside-im4::before{
+    content: url(../images/c-g.svg);
+    padding-right: 14px;
+    padding-left: 15px;
+}
+#aside-im5.active::before{
+    content: url(../images/s-w.svg);
+}
+#aside-im5::before{
+    content: url(../images/s-g.svg);
+    padding-right: 16px;
+    padding-left: 22px;
+}
+section{
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #EAEAEA
+}
+/*main>aside{
+    flex-basis: 15%;
+}*/
+aside{
+    width: 180px;
+}
+main>aside>div{
+    padding: 3% 10%;
+    position: fixed;
+}
+#fix{
+    padding: 0 0 0 10px;
+}
+
+main>aside>div>h3{
+    text-transform: capitalize;
+}
+main>section{
+    /*чтобы заполнять все пространство по основной оси основным элементом прописываем свойство flex */
+    flex: 1 1 55%;
+    margin-left: 3px;
+}
+
+#menu{
+    display: none;
+}
+#h2-s{
+    margin-top: 45px;
+    margin-left: 20px;
+}
+#head-u{
+    background-color: #C32056;
+    color: #fff;
+    margin-left: 20px;
+    width: 540px;
+    position: relative;
+    top: -10px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+
+}
+#head-u h3{
+    margin: 0;
+}
+#head-u p{
+    margin: 0;
+    margin-top: 10px;
+
+}
+#pro{
+   background-color:#F6F6F6;;
+   margin-left: 25px;
+   width: 600px;
+   height: 530px;
+}
+#c-u-e{
+    display: inline;
+    margin-left: 20px;
+}
+#c-u-e span{
+    margin-right: 110px;
+}
+input{
+    outline: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background-color: #F6F6F6;
+    border-bottom: 1px solid #b0b0b0;
+}
+.in-1{
+    margin-right: 20px;
+    width: 158px;
+    
+}
+.in-2{
+    margin-right: 19px;
+    width: 158px;
+}
+.input-1{
+    margin-top: 10px;
+    margin-left: 20px; 
+    margin-bottom: 20px;
+}
+#name-n{
+    display: inline;
+    margin-left: 20px;
+}
+.in-3{
+    width: 235px;
+    margin-right: 48px;
+}
+#first-na{
+margin-right: 210px;
+}
+#add{
+    margin-left: 20px;
+}
+#addr{
+    width: 527px;
+}
+#c-c-p{
+    margin-left: 20px;
+}
+#s-1{
+    margin-right: 155px;
+}
+#s-2{
+    margin-right: 130px;
+}
+.in-4{
+    width: 154px;
+    margin-right: 24px;
+}
+#a-m{
+    margin-left: 20px;
+}
+#textarea{
+    outline: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background-color: #F6F6F6;
+    border-bottom: 1px solid #b0b0b0;
+    width: 527px;
+}
+#btn{
+    background-color: #C32056;
+    float: right;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-right: 48px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#up-p{
+    margin:10px 50px 10px 50px;
+}
+#face{
+    background-color: #F6F6F6;
+    margin-left: 20px;
+}
+#face{
+    float: right;
+    margin-right: 20px;
+    width: 300px;
+    text-align: center;
+}
+#omg{
+    width: 130px;
+    margin:auto;
+    margin-top: -30px;
+    border-radius: 64px;
+    box-shadow: 5px 5px 2px -1px rgb(50 50 50 / 25%); 
+}
+#p-i{
+    margin-top: 10px;
+    word-break: break-all;
+}
+#p-i2{
+    margin-top: 10px;
+    word-break: break-all;
+    color: #979797;
+}
+#p-i1{
+    margin-top: 10px;
+    word-break: break-all;
+    margin-left: 40px;
+    margin-right: 40px;
+    color: #979797;
+}
+#a-f a{
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+    margin-right: 20px; 
+}
+#a-f{
+    margin-left: 60px;
+    margin-top: 20px;
+}
+#main1{
+    margin-bottom: 60px;
+    margin:auto;
+}
+#m9{
+    float: right;
+    margin-top: 10px;
+    margin-right: 40px;
+}
+@media screen and (max-width:1000px) and (min-width: 900px){
+    #face{
+        float: none;
+        width: 637px;
+        margin-bottom: 60px;
+    }
+    #pro{
+        width: 637px;
+    }
+    #head-u{
+        width: 577px;
+    }
+    #c-u-e {
+
+    margin-left: 50px;
+}
+.input-1 {
+
+    margin-left: 50px;
+}
+#name-n {
+    margin-left: 50px;
+}
+#add {
+    margin-left: 50px;
+}
+#c-c-p {
+    margin-left: 50px;
+}
+#a-m {
+    margin-left: 50px;
+}
+#a-f {
+    margin-left: 41px;
+    font-size: 14px;
+}
+    #p-i1 {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-bottom: 20px;
+
+}
+    .hr-left-side {
+    border-width: 1px;
+    width: 178px;
+    margin-left: -10px;
+    }
+    #aside-im1::before{
+    content: url(../images/da.svg);
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#aside-im2::before{
+    content: url(../images/user-g.svg);
+    padding-right: 11px;
+    padding-left: 10px;
+}
+
+#aside-im3::before{
+    content: url(../images/p-g.svg);
+    padding-right: 15px;
+    padding-left: 12px;
+}
+
+#aside-im4::before{
+    content: url(../images/c-g.svg);
+    padding-right: 10px;
+    padding-left: 5px;
+}
+
+#aside-im5::before{
+    content: url(../images/s-g.svg);
+    padding-right: 12px;
+    padding-left: 11px;
+}
+#img-item5{
+    background-color: #448B00; 
+    margin-left: 10px;
+    margin-top: -15px;
+    padding: 8px;
+    width: 160px;
+}
+#img-item6{
+    background-color: #D89E24; 
+    margin-left: 8px;
+    margin-top: -15px;
+    padding: 10px;
+    width: 160px;
+}
+#img-item7{
+    background-color: #274D97;
+    width: 160px; 
+    margin-left: 8px;
+    margin-top: -15px;
+    padding: 10px;
+}
+aside li{
+    width: 130px;
+}
+body{
+    margin-left: 0;
+}
+#fix{
+    padding-left: 10px;
+}
+}
+
+@media screen and (max-width:1100px) and (min-width: 1000px){
+    #pro {
+        margin-left: 0px;
+        width: 500px;
+        height: 510px;
+    }
+    #face{
+        width: 260px;
+        margin-right: 0
+    }
+    #c-u-e span {
+    margin-right: 77px;
+    }
+    .in-1 {
+        width: 125px;
+    }
+    .in-2{
+        width: 125px;
+    }
+    #first-na {
+    margin-right: 163px;
+}
+#a-f{
+    margin-left: 30px;
+    font-size: 14px;
+}
+.in-3 {
+    width: 192px;
+    margin-right: 40px;
+}
+#addr {
+    width: 431px;
+}
+#s-1 {
+    margin-right: 125px;
+}
+#s-2 {
+    margin-right: 92px;
+}
+.in-4 {
+    width: 122px;
+}
+#textarea{
+    width: 430px;
+}
+    #head-u{
+        width: 440px;
+        top:-20px;
+    }
+    #h2-s {
+        margin-bottom: 40px;
+}
+    .hr-left-side {
+        border-width: 1px;
+        width: 178px;
+        margin-left: -10px;
+    }
+    #aside-im1::before{
+        content: url(../images/da.svg);
+        padding-right: 10px;
+        padding-left: 10px;
+}
+
+#aside-im2::before{
+    content: url(../images/user-g.svg);
+    padding-right: 11px;
+    padding-left: 10px;
+}
+
+#aside-im3::before{
+    content: url(../images/p-g.svg);
+    padding-right: 15px;
+    padding-left: 12px;
+}
+
+#aside-im4::before{
+    content: url(../images/c-g.svg);
+    padding-right: 10px;
+    padding-left: 5px;
+}
+
+#aside-im5::before{
+    content: url(../images/s-g.svg);
+    padding-right: 12px;
+    padding-left: 11px;
+}
+
+#fix{
+    padding-left: 10px;
+}
+}
+@media screen and (max-width:900px) and (min-width: 800px){
+    
+    #face{
+        float: none;
+        width: 637px;
+        margin-bottom: 60px;
+    }
+    #pro{
+        width: 637px;
+    }
+    #head-u{
+        width: 577px;
+    }
+    #c-u-e {
+
+    margin-left: 50px;
+}
+.input-1 {
+
+    margin-left: 50px;
+}
+#name-n {
+    margin-left: 50px;
+}
+#add {
+    margin-left: 50px;
+}
+#c-c-p {
+    margin-left: 50px;
+}
+#a-m {
+    margin-left: 50px;
+}
+#a-f {
+    margin-left: 41px;
+    font-size: 14px;
+}
+    #p-i1 {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-bottom: 20px;
+
+}
+    .hr-left-side {
+    border-width: 1px;
+    width: 120px;
+    margin-left: -11px;
+    }
+    #aside-im1::before{
+    content: url(../images/da.svg);
+    padding-right: 10px;
+    padding-left: 5px;
+}
+
+#aside-im2::before{
+    content: url(../images/user-g.svg);
+    padding-right: 11px;
+    padding-left: 5px;
+}
+
+#aside-im3::before{
+    content: url(../images/p-g.svg);
+    padding-right: 15px;
+    padding-left: 6px;
+}
+
+#aside-im4::before{
+    content: url(../images/c-g.svg);
+    padding-right: 10px;
+    padding-left: 2.5px;
+}
+
+#aside-im5::before{
+    content: url(../images/s-g.svg);
+    padding-right: 12px;
+    padding-left: 5.5px;
+}
+aside li{
+    width: 105px;
+}
+#h2-s {
+    margin-top: 42px;
+    font-size: 22px;
+}
+body{
+    margin-left: 0;
+}
+#fix{
+    padding-left: 10px;
+}
+section {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+aside h2{
+    font-size: 20px;
+}
+aside ul li a {
+    font-size: 12px;
+}
+}
+
+
+
+@media screen and (max-width:799px) and (min-width:700px){
+    aside{
+        display: none;
+    }
+    main>section{
+        margin:0;
+    }
+    #main1{
+        margin-left: 60px;
+    }
+    #menu{
+        display: block;
+        float: left;
+        margin-top: 45px;
+        margin-left: 22px;
+        }
+    
+     
+    #face{
+        float: none;
+        width: 637px;
+        margin-bottom: 60px;
+    }
+    #pro{
+        width: 637px;
+    }
+    #head-u{
+        width: 577px;
+    }
+    #c-u-e {
+
+    margin-left: 50px;
+}
+.input-1 {
+
+    margin-left: 50px;
+}
+#name-n {
+    margin-left: 50px;
+}
+#add {
+    margin-left: 50px;
+}
+#c-c-p {
+    margin-left: 50px;
+}
+#a-m {
+    margin-left: 50px;
+}
+#a-f {
+    margin-left: 50px;
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+    #p-i1 {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-bottom: 20px;
+
+}
+#m9 {
+    margin-top: 8px;
+    margin-right: 55px;
+}
+   
+#h2-s {
+    margin-top: 42px;
+    font-size: 22px;
+    margin-left: 65px;
+    margin-bottom: 60px;
+}
+body{
+    margin-left: 0;
+}
+#fix{
+    padding-left: 10px;
+}
+section {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+}
+@media screen and (max-width:700px) and (min-width:600px){
+    aside{
+        display: none;
+    }
+    main>section{
+        margin:0;
+    }
+    #first-na {
+    margin-right: 133px;
+}
+.in-3 {
+    width: 185px;
+    margin-right: 20px;
+}
+    #main1{
+        margin-left: 60px;
+    }
+    #menu{
+        display: block;
+        float: left;
+        margin-top: 45px;
+        margin-left: 22px;
+        }
+    
+     
+    #face{
+        float: none;
+        width: 480px;
+        margin-bottom: 60px;
+        margin-left: 50px;
+    }
+    #pro{
+        width: 480px;
+        margin-left: 50px;
+    }
+    #head-u{
+        width: 420px;
+    }
+    #c-u-e {
+
+    margin-left: 50px;
+}
+#c-u-e span {
+    margin-right: 60px;
+}
+.input-1 {
+
+    margin-left: 50px;
+}
+#name-n {
+    margin-left: 50px;
+}
+#add {
+    margin-left: 50px;
+}
+#c-c-p {
+    margin-left: 50px;
+}
+#a-m {
+    margin-left: 50px;
+}
+#a-f {
+    margin-left: 120px;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+    #p-i1 {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-bottom: 20px;
+
+}
+#addr {
+    width: 425px;
+}
+.in-4 {
+    width: 104px;
+    margin-right: 29px;
+}
+.in-2 {
+    margin-right: 10px;
+    width: 115px;
+}
+.in-1 {
+    margin-right: 15px;
+    width: 115px;
+}
+#m9 {
+    margin-top: 8px;
+    margin-right: 30px;
+    font-size: 12px;
+}
+   
+#h2-s {
+    margin-top: 42px;
+    font-size: 22px;
+    margin-left: 65px;
+    margin-bottom: 60px;
+}
+body{
+    margin-left: 0;
+}
+#fix{
+    padding-left: 10px;
+}
+section {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+#textarea{
+    width: 425px;
+}
+}
+@media screen and (max-width:600px) and (min-width:500px){
+    aside{
+        display: none;
+    }
+    main>section{
+        margin:0;
+    }
+    #first-na {
+    margin-right: 133px;
+}
+.in-3 {
+    width: 185px;
+    margin-right: 20px;
+}
+    #main1{
+        margin-left: 0px;
+    }
+    #menu{
+        display: block;
+        float: left;
+        margin-top: 42px;
+        margin-left: 27px;
+        }
+    
+     
+    #face{
+        float: none;
+        width: 480px;
+        margin-bottom: 60px;
+        margin-left: 25px;
+    }
+    #pro{
+        width: 480px;
+        margin-left: 25px;
+    }
+    #head-u{
+        width: 420px;
+    }
+    #c-u-e {
+
+    margin-left: 50px;
+}
+#c-u-e span {
+    margin-right: 60px;
+}
+.input-1 {
+
+    margin-left: 50px;
+}
+#name-n {
+    margin-left: 50px;
+}
+#add {
+    margin-left: 50px;
+}
+#c-c-p {
+    margin-left: 50px;
+}
+#a-m {
+    margin-left: 50px;
+}
+#a-f {
+    margin-left: 40px;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+    #p-i1 {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-bottom: 20px;
+
+}
+#addr {
+    width: 425px;
+}
+.in-4 {
+    width: 104px;
+    margin-right: 29px;
+}
+.in-2 {
+    margin-right: 10px;
+    width: 115px;
+}
+.in-1 {
+    margin-right: 15px;
+    width: 115px;
+}
+#m9 {
+    margin-top: 8px;
+    margin-right: 30px;
+    font-size: 12px;
+}
+   
+#h2-s {
+    margin-top: 42px;
+    font-size: 22px;
+    margin-left: 65px;
+    margin-bottom: 60px;
+}
+body{
+    margin-left: 0;
+}
+#fix{
+    padding-left: 10px;
+}
+section {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+#textarea{
+    width: 425px;
+}
+    
+    aside{
+        display: none;
+    
+}
+}
+
+@media screen and (max-width:500px) and (min-width: 400px){  
+    aside{
+        display: none;
+    }
+    main>section{
+        margin:0;
+    }
+    #first-na {
+    margin-right: 133px;
+}
+.in-3 {
+    width: 143px;
+    margin-right: 20px;
+}
+    #main1{
+        margin-left: 0px;
+    }
+    #menu{
+        display: block;
+        float: left;
+        margin-top: 42px;
+        margin-left: 27px;
+        }
+    
+     
+    #face{
+        float: none;
+        width: 390px;
+        margin-bottom: 60px;
+        margin-left: 25px;
+    }
+    #pro{
+        width: 390px;
+        margin-left: 25px;
+    }
+    #head-u {
+    margin-left: 9px;
+    top: -15px;
+    width: 360PX;
+    padding-top: 10px;
+    padding-left: 13px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+    #c-u-e {
+
+    margin-left: 30px;
+}
+#c-u-e span {
+    margin-right: 31px;
+}
+.input-1 {
+
+    margin-left: 30px;
+}
+#name-n {
+    margin-left: 30px;
+}
+#add {
+    margin-left: 30px;
+}
+#c-c-p {
+    margin-left: 30px;
+}
+#first-na {
+    margin-right: 94px;
+}
+#a-m {
+    margin-left: 30px;
+}
+#a-f {
+    margin-left: 35px;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+    #p-i1 {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-bottom: 20px;
+
+}
+#addr {
+    width: 337px;
+}
+.in-4 {
+    width: 95px;
+    margin-right: 10px;
+}
+.in-2 {
+    margin-right: 6px;
+    width: 90px;
+}
+.in-1 {
+    margin-right: 11px;
+    width: 90px;
+}
+#m9 {
+    margin-top: 8px;
+    margin-right: 30px;
+    font-size: 12px;
+}
+   
+#h2-s {
+    margin-top: 42px;
+    font-size: 22px;
+    margin-left: 65px;
+    margin-bottom: 60px;
+}
+body{
+    margin-left: 0;
+}
+#fix{
+    padding-left: 10px;
+}
+section {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+#s-1 {
+    margin-right: 84px;
+}
+#s-2 {
+    margin-right: 54px;
+}
+#textarea{
+    width: 335px;
+}
+    aside{
+        display: none; 
+}
+#btn {
+
+    font-size: 15px;
+    margin-right: 20px;
+}  
+#a-f a {
+    margin-right: 12px;
+}
+}
+@media screen and (max-width:400px) and (min-width: 320px){
+ aside{
+        display: none;
+    }
+    main>section{
+        margin:0;
+    }
+    #first-na {
+    margin-right: 133px;
+}
+.in-3 {
+    width: 126px;
+    margin-right: 20px;
+}
+    #main1{
+        margin-left: 0px;
+    }
+    #menu{
+        display: block;
+        float: left;
+        margin-top: 42px;
+        margin-left: 27px;
+        }
+    
+     
+    #face{
+        float: none;
+        width: 320px;
+        margin-bottom: 60px;
+        margin-left: 30px;
+    }
+    #pro{
+        width: 320px;
+        margin-left: 30px;
+    }
+    #head-u {
+    margin-left: 5px;
+    top: -15px;
+    width: 300PX;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+    #c-u-e {
+
+    margin-left: 15px;
+}
+#c-u-e span {
+    margin-right: 20px;
+}
+.input-1 {
+
+    margin-left: 15px;
+}
+#name-n {
+    margin-left: 15px;
+}
+#add {
+    margin-left: 15px;
+}
+#c-c-p {
+    margin-left: 15px;
+}
+#first-na {
+    margin-right: 76px;
+}
+#a-m {
+    margin-left: 15px;
+}
+#a-f {
+    margin-left: 70px;
+    font-size: 11px;
+    margin-bottom: 30px;
+}
+    #p-i1 {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-bottom: 20px;
+
+}
+#addr {
+    width: 301px;
+}
+.in-4 {
+    width: 84px;
+    margin-right: 10px;
+}
+.in-2 {
+    margin-right: 6px;
+    width: 73px;
+}
+.in-1 {
+    margin-right: 11px;
+    width: 90px;
+}
+#m9 {
+    margin-top: 8px;
+    margin-right: 30px;
+    font-size: 13px;
+}
+   
+#h2-s {
+    margin-top: 42px;
+    font-size: 22px;
+    margin-left: 65px;
+    margin-bottom: 60px;
+}
+body{
+    margin-left: 0;
+}
+#fix{
+    padding-left: 10px;
+}
+section {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+#s-1 {
+    margin-right: 72px;
+}
+#s-2 {
+    margin-right: 47px;
+}
+#textarea{
+    width: 300px;
+}
+    aside{
+        display: none; 
+}
+#btn {
+
+    font-size: 16px;
+    margin-right: 35px;
+}  
+#a-f a {
+    margin-right: 12px;
+}
+}
